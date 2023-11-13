@@ -4,27 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>Minha Loja</title>
 </head>
 <body>
-
-    <div class="produto">
-        <img src="produto1.jpg" alt="Produto 1">
-        <h3>Produto 1</h3>
-        <p class="preco">R$ 50,00</p>
+ 
+    <div class="lojinha">
+        <div class="produto" id="produto1">
+        <img src="biquinho.jpeg" alt="Biquinho">
+        <h3>Pimenta Biquinho</h3>
+        <p class="preco">R$ 15,00</p>
+        <button onclick="adicionarAoCarrinho('produto1', 15.00)">Adicionar ao Carrinho</button>
     </div>
 
-    <div class="produto">
-        <img src="produto2.jpg" alt="Produto 2">
-        <h3>Produto 2</h3>
-        <p class="preco">R$ 35,00</p>
+    <div class="produto" id="produto2">
+        <img src="dedo de moça em molho.jpeg" alt="Dedo de Moça">
+        <h3>Molho Pimenta Dedo de Moça</h3>
+        <p class="preco">R$ 15,00</p>
+        <button onclick="adicionarAoCarrinho('produto2', 15.00)">Adicionar ao Carrinho</button>
     </div>
 
-    <div class="produto">
-        <img src="produto3.jpg" alt="Produto 3">
-        <h3>Produto 3</h3>
-        <p class="preco">R$ 80,00</p>
+    <div class="produto" id="produto3">
+        <img src="dedo de moça.jpeg" alt="Dedo de Moça">
+        <h3>Pimenta Dedo de Moça</h3>
+        <p class="preco">R$ 15,00</p>
+        <button onclick="adicionarAoCarrinho('produto3', 15.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="produto" id="produto4">
+        <img src="mista.jpeg" alt="Mista">
+        <h3>Pimenta Mista</h3>
+        <p class="preco">R$ 15,00</p>
+        <button onclick="adicionarAoCarrinho('produto4', 15.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="produto" id="produto5">
+        <img src="comari.jpeg" alt="Comari">
+        <h3>Pimenta Comari</h3>
+        <p class="preco">R$ 15,00</p>
+        <button onclick="adicionarAoCarrinho('produto5', 15.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div class="produto" id="produto6">
+        <img src="salame.jpeg" alt="Salame">
+        <h3>Salame</h3>
+        <p class="preco">R$ 25,00</p>
+        <button onclick="adicionarAoCarrinho('produto6', 15.00)">Adicionar ao Carrinho</button>
+    </div>
+
+    <div id="carrinho">
+        <h2>Carrinho</h2>
+        <ul id="listaCarrinho"></ul>
+        <p>Total: <span id="totalCarrinho">R$ 0,00</span></p>
     </div>
 
 </body>
