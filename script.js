@@ -1,34 +1,27 @@
-let carrinho = [];
+function adicionarAoCarrinho(id, preco) {
+    // Obter o produto selecionado
+    let produtoSelecionado = document.getElementById(id);
 
-function adicionarAoCarrinho(produtoId, preco) {
-    const produto = document.getElementById(produtoId);
-    
-    // Adiciona o produto ao carrinho
-    carrinho.push({
-        nome: produto.querySelector('h3').textContent,
-        preco: preco
-    });
+    // Clonar o produto para movê-lo para o carrinho
+    let produtoNoCarrinho = produtoSelecionado.cloneNode(true);
 
-    // Atualiza a exibição do carrinho
-    atualizarCarrinho();
+    // Adicionar o produto clonado à lista do carrinho
+    document.getElementById('listaCarrinho').appendChild(produtoNoCarrinho);
+
+    // Atualizar o total do carrinho
+    atualizarTotalCarrinho(preco);
 }
 
-function atualizarCarrinho() {
-    const listaCarrinho = document.getElementById('listaCarrinho');
-    const totalCarrinhoElement = document.getElementById('totalCarrinho');
+function atualizarTotalCarrinho(preco) {
+    // Obter o elemento do total do carrinho
+    let totalCarrinho = document.getElementById('totalCarrinho');
 
-    // Limpa a lista de carrinho
-    listaCarrinho.innerHTML = '';
+    // Obter o valor atual do total e converter para número
+    let totalAtual = parseFloat(totalCarrinho.innerText.replace('R$', '').trim());
 
-    // Atualiza a lista de carrinho e o total
-    let totalCarrinho = 0;
-    carrinho.forEach(item => {
-        const listItem = document.createElement('li');
-        listItem.textContent = `${item.nome} - R$ ${item.preco.toFixed(2)}`;
-        listaCarrinho.appendChild(listItem);
+    // Adicionar o preço do produto ao total
+    let novoTotal = totalAtual + preco;
 
-        totalCarrinho += item.preco;
-    });
-
-    totalCarrinhoElement.textContent = `R$ ${totalCarrinho.toFixed(2)}`;
-}
+    // Atualizar o texto do total com o novo valor
+    totalCarrinho.innerText = 'R$ ' + novoTotal.toFixed(2);
+} 
