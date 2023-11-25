@@ -28,12 +28,12 @@ body {
 }
 
 .produto {
-    flex: 0 0 calc(33.33% - 40px); /* Ajuste a largura conforme necessário */
+    flex: 0 0 calc(23,23% - 30px); /* Ajuste a largura conforme necessário */
     margin: 1px;
     padding: 15px;
-    background-color: #fff;
+    background-color: #ffffff;
     border: 1px solid #cccccc;
-    border-radius: 8px;
+    border-radius: 5px;
     text-align: center;
 }
 #carrinho-icon {
