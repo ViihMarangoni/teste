@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -28,7 +28,11 @@ body {
 }
 
 .produto {
+<<<<<<< HEAD
     flex: 0 0 calc(23,23% - 30px); /* Ajuste a largura conforme necessário */
+=======
+    flex: 0 0 calc(20% - 10px);
+>>>>>>> a7dd8212b2674f16af9a8f69bc2d2a9bf82e6e6f
     margin: 1px;
     padding: 15px;
     background-color: #ffffff;
@@ -36,9 +40,10 @@ body {
     border-radius: 5px;
     text-align: center;
 }
+
 #carrinho-icon {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
+    top: 10px;
+    right: 0px;
+    cursor: all-scroll;
 }
